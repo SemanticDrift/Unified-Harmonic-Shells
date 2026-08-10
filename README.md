@@ -1,128 +1,80 @@
 # Unified Harmonic Shells (UHS)
-### Series: Harmonic Structures in Natural Systems
+
+**Series:** Harmonic Structures in Natural Systems
 **Author:** Carolina Johnson (CJ)
-**Date:** July 2025
+**Date:** December 2025
 **License:** CC BY 4.0, Attribution required
 **DOI:** https://doi.org/10.5281/zenodo.18307184
 **ORCID:** https://orcid.org/0009-0002-8819-3347
 
----
-
 ## What This Does
 
-Shells are not passive boundaries. They are emergent nodes of harmonic resonance. From atomic electron shells to planetary orbital layers, nested shell structures across natural systems are not arbitrary. They reflect a single universal law: radial shells form where curvature and frequency constructively align. This paper presents a scalable radial framework in which shells represent discrete energy-frequency states arising at specific curvature thresholds, governed by the Λ²·Φ operator. Includes cross-domain validation code.
+Shells are not passive spatial boundaries; they are candidate nodes of phase-locked harmonic resonance. UHS establishes a radial quantization law derived by composing the curvature-frequency mapping of The Phi-Operator (Λ²·Φ) with discrete harmonic boundary conditions, positioned within the Stratified Axiomatics hierarchy.
 
----
+The resulting sequence is calibrated against the atomic K-shell scale (the Bohr radius, a₀) and shown to admit a defined closure relation consistent with the Bohr model's n²a₀ radius scaling. This paper establishes the mathematical foundation only: the radial law, its atomic calibration, and its formal shell-classification conditions. Application beyond the atomic calibration case is left to dependent papers in the series.
 
 ## The Core Law
 
-At the foundation of UHS is the curvature-frequency identity expressed by the Φ-operator:
+UHS imports the differential mapping established by The Phi-Operator:
 
-```
-f = c / r
-```
+f(r) = Λ² · Φ(r) = Λ² / r^(3/2)
 
-Radial shells emerge at radii where:
+Discrete shell layers emerge when the system's characteristic frequency locks into an allowed harmonic state, governed by a fundamental mode f₀ and discrete harmonic order n ∈ ℕ:
 
-```
-rₙ = c / (n · f₀)     where n ∈ ℕ
-```
+f_n = n · f₀
 
-Each shell corresponds to an allowed harmonic state. Only these harmonics form stable, observable layers. Physical distance is recovered by:
+Inverting for the quantized radial shell distance:
 
-```
-D = h × R₀
-```
+r_n = (Λ² / (n · f₀))^(2/3)
 
-Where h is a rational harmonic coordinate derived from exact fold operations and R₀ is the intrinsic scale of the system. No gravitational constants. No mass terms. No fitting.
+`r_n` decreases as `n` increases: higher harmonic order corresponds to tighter binding at smaller radius.
 
----
+## K-Shell Calibration
 
-## Cross-Domain Manifestations
+Setting the n=1 internal node to the Bohr radius a₀ calibrates the sequence for the atomic case:
 
-The same inverse harmonic spacing governs nested shells across:
+r_n = a₀ / n^(2/3)
 
-- **Quantum:** Electron shells, K through N, governed by curvature-frequency scaling
-- **Astronomy:** Planetary moons and ring boundaries, derived from R₀ and base torsion τ = 1/6
-- **Geology:** Earth interior layers, anchored to equatorial radius with torsion correction
-- **Neuroscience:** EEG frequency bands as cortical resonance shells
-- **Acoustics:** Standing wave harmonics in resonant cavities
-- **Biology:** Cell membrane bilayer spacing as harmonic trapping zones
+K-shell (n=1): 1.000a₀
+L-shell (n=2): 0.630a₀
+M-shell (n=3): 0.480a₀
+N-shell (n=4): 0.397a₀
 
-These systems do not follow identical morphologies. The underlying principle is invariant: radial shells form where resonance becomes geometrically stable.
+The outer spatial boundary is defined via a structural closure relation:
 
----
+⟨r_n⟩ = a₀ · (a₀/r_n)³ = a₀ · n²
 
-## Shell Conditions and Stability
+This closure is a defined structural identity within UHS, not an independent first-principles derivation of the Bohr model's n²a₀ scaling. UHS does not derive the K-shell; it calibrates against it and shows the resulting sequence closes consistently.
 
-To qualify as a stable harmonic shell, a radial layer must satisfy:
+## Shell Conditions
 
-- A resonant frequency fₙ in the set {n · f₀}
-- A curvature threshold κₙ = 1 / rₙ
-- A closed phase loop achieving constructive interference
+A radial layer is classified as a candidate stable harmonic shell when it satisfies three tier-stratified constraints:
 
-Deviations from these conditions produce collapse, drift, or instability, observed as decay, disorder, or energy dispersion.
-
----
-
-## Shell Ladder and Harmonic Scaling
-
-Each shell layer forms a step in the harmonic ladder:
-
-```
-r₁ = c / f₀
-r₂ = c / (2 · f₀)
-r₃ = c / (3 · f₀)
-```
-
-Higher frequencies at lower radii, denser curvature. Lower frequencies at extended radii, slower oscillation. This is consistent across quantum shells, acoustic harmonics, and planetary systems. The same law. Different scales.
-
----
-
-## Run It
-
-```
-pip install numpy matplotlib
-python uhs_validation.py
-```
-
-Output: four-panel validation chart showing exact rational harmonic coordinates against independent observed data across Saturn, Jupiter, Earth interior, and acoustic standing waves. Saved as `uhs_validation.png`.
-
-Saturn and Jupiter match to within 0.01% to 0.63% using exact rational arithmetic derived from base torsion τ = 1/6 and system constants, with no gravitational constants and no fitting. Earth's Core-Mantle Boundary lands at 0.72% using the τ/4 torsion correction. The Inner Core Boundary sits at 1.57%, reflecting active planetary torsion in a rotating, tilted system with a liquid outer core. Acoustic harmonics are exact by definition.
-
----
+- **Frequency Quantization:** f_n ∈ {n·f₀ | n ∈ ℕ}
+- **Curvature Matching:** χ_n = 1/r_n = (n·f₀/Λ²)^(2/3)
+- **Phase Closure:** ∮ k(r) dr = 2πm along a closed phase path, where k(r) is the local wavenumber and m ∈ ℤ
 
 ## Dependencies
 
 | Framework | DOI |
-|-----------|-----|
+|---|---|
 | Stratified Axiomatics | https://doi.org/10.5281/zenodo.18227025 |
 | The Φ-Operator (Λ²·Φ) | https://doi.org/10.5281/zenodo.18484604 |
-| Law of Admissibility (R=4) | https://doi.org/10.5281/zenodo.18993233 |
 
-Full publication list: https://www.semanticshift.net
-
----
+Full publication list: https://www.SemanticDrift.net
 
 ## Repository Contents
 
 - `README.md` — this file
 - `Unified Harmonic Shells (UHS).pdf` — full paper
-- `uhs_validation.py` — cross-domain validation across four independent datasets
-- `uhs_validation.png` — validation chart, exact rational coordinates vs observed data
-
----
 
 ## Citation
-
 ```
-Johnson, C. (2025). Unified Harmonic Shells (UHS).
+Johnson, C. (2025). *Unified Harmonic Shells (UHS)*.
 Series: Harmonic Structures in Natural Systems. SemanticShift.
 DOI: https://doi.org/10.5281/zenodo.18307184
 License: CC BY 4.0
 ```
-
----
 
 ## License
 
